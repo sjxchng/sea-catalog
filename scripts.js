@@ -23,19 +23,102 @@
  *
  */
 
-const FRESH_PRINCE_URL =
-  "https://upload.wikimedia.org/wikipedia/en/3/33/Fresh_Prince_S1_DVD.jpg";
-const CURB_POSTER_URL =
-  "https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg";
-const EAST_LOS_HIGH_POSTER_URL =
-  "https://static.wikia.nocookie.net/hulu/images/6/64/East_Los_High.jpg";
 
-// This is an array of strings (TV show titles)
-let titles = [
-  "Fresh Prince of Bel Air",
-  "Curb Your Enthusiasm",
-  "East Los High",
-];
+// Fields for each piece
+//
+// id: unique id for each piece
+// type: can be either "verse", "song", or "personal"
+// korean: Korean text on the piece (null if unavailable)
+// english: English translation or Bible passage
+// reference: either Bible verse reference or song name
+// book: Bible book, or "Hymn", or "Personal"
+// bibleOrder: position in the Bible (0 = hymn, -1 = personal)
+// chapter: chapter number (0 if not a Bible verse)
+// verse: verse number (0 if not a Bible verse)
+// date: date created in YYYY-MM-DD format
+// tool: art tool used
+// piano: piano piece played alongside (null if none)
+// image: file path to the photo
+
+const pieces = [
+  {
+    id: 1,
+    type: "song",
+    korean: "샬롬 샬롬 샬롬 내니 두려워말아라 나의 아들 나의 딸아 안심하라 나의 평안을 주노라 세상과는 다른 평안",
+    english: "Shalom, do not be afraid. My son, my daughter, be at peace. I give you my peace, not as the world gives. Do not fear.",
+    reference: "샬롬 (Shalom)",
+    book: "Hymn",
+    bibleOrder: 0,
+    chapter: 0,
+    verse: 0,
+    date: null,
+    tool: "Kuretake Fude Brush Pen No.22",
+    piano: null,
+    image: "images/1.jpg"
+  },
+  {
+    id: 2,
+    type: "verse",
+    korean: null,
+    english: "Peace I leave with you; my peace I give to you. Not as the world gives do I give to you. Let not your hearts be troubled, neither let them be afraid.",
+    reference: "John 14:27",
+    book: "John",
+    bibleOrder: 43,
+    chapter: 14,
+    verse: 27,
+    date: null,
+    tool: "Kuretake Fude Brush Pen No.22",
+    piano: null,
+    image: "images/2.jpg"
+  },
+  {
+    id: 3,
+    type: "verse",
+    korean: null,
+    english: "Look carefully then how you walk, not as unwise but as wise, making the best use of the time, because the days are evil. Therefore do not be foolish, but understand what the will of the Lord is.",
+    reference: "Ephesians 5:15-17",
+    book: "Ephesians",
+    bibleOrder: 49,
+    chapter: 5,
+    verse: 15,
+    date: null,
+    tool: "Kuretake Fude Brush Pen No.22",
+    piano: null,
+    image: "images/3.jpg"
+  },
+  {
+    id: 4,
+    type: "verse",
+    korean: null,
+    english: "Your word is a lamp to my feet and a light to my path.",
+    reference: "Psalm 119:105",
+    book: "Psalms",
+    bibleOrder: 19,
+    chapter: 119,
+    verse: 105,
+    date: null,
+    tool: "Procreate",
+    piano: null,
+    image: "images/4.jpg"
+  },
+  {
+    id: 5,
+    type: "verse",
+    korean: null,
+    english: "When justice is done, it is a joy to the righteous but terror to evildoers. Whoever keeps his mouth and his tongue keeps himself out of trouble.",
+    reference: "Proverbs 21:15, 23",
+    book: "Proverbs",
+    bibleOrder: 20,
+    chapter: 21,
+    verse: 15,
+    date: null,
+    tool: "Kuretake Fude Brush Pen No.22",
+    piano: null,
+    image: "images/5.jpg"
+  },
+]
+
+
 // Your final submission should have much more data than this, and
 // you should use more than just an array of strings to store it all.
 
