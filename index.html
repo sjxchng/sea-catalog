@@ -1,7 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Page Title -->
     <title>PianoCalligraphy</title>
+    
     <meta name="description" content="A collection of calligraphy art paired with piano music" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,6 +36,7 @@
     <div class="controls-wrapper">
       <div class="controls">
         <!-- Search -->
+        <!-- handleSearch() called every time the user types in the search input -->
         <div class="control-group">
           <label for="search-input">Search</label>
           <input
@@ -44,6 +47,7 @@
           />
         </div>
 
+        <!-- handleFilter() called every time the user changes a filter option -->
         <!-- Filter by type -->
         <div class="control-group">
           <label for="type-filter">Type</label>
@@ -53,7 +57,6 @@
             <option value="song">Song Lyrics</option>
           </select>
         </div>
-
         <!-- Filter by book -->
         <div class="control-group">
           <label for="book-filter">Book / Source</label>
@@ -63,6 +66,7 @@
         </div>
 
         <!-- Sort -->
+        <!-- handleSort() called every time the user changes the sort option -->
         <div class="control-group">
           <label for="sort-select">Sort By</label>
           <select id="sort-select" onchange="handleSort()">
@@ -88,10 +92,10 @@
       <p class="results-count" id="results-count"></p>
     </div>
 
-    <!-- Card Container -->
+    <!-- Card Container (this is where the cards are displayed) -->
     <div id="card-container"></div>
 
-    <!-- Empty state -->
+    <!-- Empty state (no results found) -->
     <div id="empty-state" style="display:none;">
       <div class="empty-state">
         <p class="empty-icon">🌸</p>
@@ -99,7 +103,7 @@
       </div>
     </div>
 
-    <!-- Hidden template card -->
+    <!-- Hidden template card (invisible; JS clones this for each new card) --> 
     <div class="card" style="display: none">
       <div class="card-content">
         <img src="" alt="" />
@@ -118,6 +122,7 @@
     <div class="favorites-section" id="favorites-section">
       <div class="favorites-header">
         <h2>🌸 My Favorites <span id="fav-count" class="fav-count">0</span></h2>
+        <!-- clear favorites button -->
         <button onclick="clearFavorites()" class="clear-btn">Clear All</button>
       </div>
       <div id="favorites-container" class="favorites-container">
@@ -131,9 +136,13 @@
         <h2 class="request-title">✦ Request a Piece ✦</h2>
         <p class="request-subtitle">Is there a verse or lyric you'd like written? Leave a request below.</p>
         <div class="request-form">
+          <!-- name input -->
           <input type="text" id="request-name" placeholder="Your name" />
+          <!-- verse/lyric input -->
           <input type="text" id="request-text" placeholder="The verse or lyric you'd like..." />
+          <!-- reference input -->
           <input type="text" id="request-ref" placeholder="Reference (e.g. Psalm 23:1)" />
+          <!-- submit button -->
           <button onclick="submitRequest()" class="submit-btn">Submit Request ✦</button>
         </div>
         <div id="requests-list"></div>
