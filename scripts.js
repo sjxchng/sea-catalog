@@ -136,7 +136,7 @@ const pieces = [
     type: "personal",
     korean: "내사랑 시우 열아홉살 생일축하해",
     english: "Happy 19th Birthday to my love Siwoo",
-    title: "Happy 19th Birthday to My Love Siwoo",
+    title: "Happy Birthday",
     book: "Personal",
     bibleOrder: -1,
     chapter: 0,
