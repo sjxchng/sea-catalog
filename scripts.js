@@ -61,7 +61,7 @@ const pieces = [
     type: "verse",
     korean: "평안을 너희에게 끼치노니 곧 나의 평안을 너희에게 주노라 내가 너희에게 주는 것은 세상이 주는 것과 같지 아니하니라 너희는 마음에 근심하지도 말고 두려워하지도 말라",
     english: "Peace I leave with you; my peace I give to you. Not as the world gives do I give to you. Let not your hearts be troubled, neither let them be afraid.",
-    title: "Peace I Leave With You",
+    title: "John 14:27",
     book: "John",
     bibleOrder: 43,
     chapter: 14,
@@ -76,7 +76,7 @@ const pieces = [
     type: "verse",
     korean: "그런즉 너희가 어떻게 행할지를 자세히 주의하여 지혜 없는 자 같이 하지 말고 오직 지혜 있는 자 같이 하여 세월을 아끼라 때가 악하니라 그러므로 어리석은 자가 되지 말고 오직 주의 뜻이 무엇인가 이해하라",
     english: "Look carefully then how you walk, not as unwise but as wise, making the best use of the time, because the days are evil. Therefore do not be foolish, but understand what the will of the Lord is.",
-    title: "Make the Best Use of the Time",
+    title: "Ephesians 5:15-17",
     book: "Ephesians",
     bibleOrder: 49,
     chapter: 5,
@@ -91,7 +91,7 @@ const pieces = [
     type: "verse",
     korean: "주의 말씀은 내 발에 등이요 내 길에 빛이시라",
     english: "Your word is a lamp to my feet and a light to my path.",
-    title: "Your Word is a Lamp",
+    title: "Psalms 119:105",
     book: "Psalms",
     bibleOrder: 19,
     chapter: 119,
@@ -106,7 +106,7 @@ const pieces = [
     type: "verse",
     korean: "공의를 행하는 것이 의인에게는 즐거움이요 죄인에게는 패망이니라 / 입과 혀를 지키는 자는 자기의 영혼을 환난에서 보전하느니라",
     english: "When justice is done, it is a joy to the righteous but terror to evildoers. Whoever keeps his mouth and his tongue keeps himself out of trouble.",
-    title: "Justice and Wisdom",
+    title: "Proverbs 21:15",
     book: "Proverbs",
     bibleOrder: 20,
     chapter: 21,
@@ -121,7 +121,7 @@ const pieces = [
     type: "verse",
     korean: "그런즉 서서 진리로 너희 허리 띠를 띠고 의의 호심경을 붙이고 평안의 복음이 준비한 것으로 신을 신고 모든 것 위에 믿음의 방패를 가지고 이로써 능히 악한 자의 모든 불화살을 소멸하고 구원의 투구와 성령의 검 곧 하나님의 말씀을 가지라",
     english: "Stand therefore, having fastened on the belt of truth, and having put on the breastplate of righteousness, and, as shoes for your feet, having put on the readiness given by the gospel of peace. In all circumstances take up the shield of faith, with which you can extinguish all the flaming darts of the evil one; and take the helmet of salvation, and the sword of the Spirit, which is the word of God.",
-    title: "Stand Therefore with the Armor of God",
+    title: "Ephesians 6:14-17",
     book: "Ephesians",
     bibleOrder: 49,
     chapter: 6,
@@ -151,7 +151,7 @@ const pieces = [
     type: "verse",
     korean: "형제여 성도들의 마음이 너로 말미암아 평안함을 얻었으니 내가 너의 사랑으로 많은 기쁨과 위로를 받았노라",
     english: "For I have derived much joy and comfort from your love, my brother, because the hearts of the saints have been refreshed through you.",
-    title: "Derived Joy and Comfort",
+    title: "Philemon 1:7",
     book: "Philemon",
     bibleOrder: 57,
     chapter: 1,
@@ -166,7 +166,7 @@ const pieces = [
     type: "verse",
     korean: "그러하도다 형제여 나로 주 안에서 너로 말미암아 기쁨을 얻게 하고 내 마음이 그리스도 안에서 평안하게 하라",
     english: "Yes, brother, I want some benefit from you in the Lord; refresh my heart in Christ.",
-    title: "Yes, Brother",
+    title: "Philemon 1:20",
     book: "Philemon",
     bibleOrder: 57,
     chapter: 1,
@@ -181,7 +181,7 @@ const pieces = [
     type: "verse",
     korean: "하늘로부터 소리가 나기를 너는 내 사랑하는 아들이라 내가 너를 기뻐하노라 하시니라",
     english: "And a voice came from heaven, 'You are my beloved Son; with you I am well pleased.'",
-    title: "Peace I Leave With You",
+    title: "Mark 1:11",
     book: "Mark",
     bibleOrder: 41,
     chapter: 1,
@@ -412,15 +412,3 @@ function handleSearch() {
 
 // This calls the addCards() function when the page is first loaded
 document.addEventListener("DOMContentLoaded", showCards);
-
-function quoteAlert() {
-  console.log("Button Clicked!");
-  alert(
-    "I guess I can kiss heaven goodbye, because it got to be a sin to look this good!",
-  );
-}
-
-function removeLastCard() {
-  titles.pop(); // Remove last item in titles array
-  showCards(); // Call showCards again to refresh
-}
