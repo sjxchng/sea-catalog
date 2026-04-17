@@ -405,7 +405,12 @@ function handleSearch() {
   // get user input
   const userInput = document.getElementById("search-input").value;
   // filter pieces array
-  displayedPieces = pieces.filter((piece) => piece.title.toLowerCase().includes(userInput.toLowerCase()));
+  // search not only by title, but also by English and Korean text
+  displayedPieces = pieces.filter((piece) => 
+    piece.title.toLowerCase().includes(userInput.toLowerCase()) ||
+    piece.english.toLowerCase().includes(userInput.toLowerCase()) ||
+    piece.korean.toLowerCase().includes(userInput.toLowerCase())
+  );
   // display filtered pieces
   showCards();
 }
