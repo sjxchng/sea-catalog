@@ -343,6 +343,8 @@ const pieces = [
   }
 ];
 
+let displayedPieces = pieces;
+
 // This function adds cards the page to display the data in the array
 function showCards() {
   // locate the container in the HTML where the cards should be added
@@ -352,8 +354,8 @@ function showCards() {
 
   const templateCard = document.querySelector(".card");
 
-  for (let i = 0; i < pieces.length; i++) {
-    let piece = pieces[i];
+  for (let i = 0; i < displayedPieces.length; i++) {
+    let piece = displayedPieces[i];
 
     const nextCard = templateCard.cloneNode(true); // Copy the template card
     editCardContent(nextCard, piece); // Edit title and image
@@ -397,6 +399,15 @@ function editCardContent(card, piece) {
   // View the output by right clicking on your website,
   // select "Inspect", then click on the "Console" tab
   console.log("new card:", piece.title, "- html: ", card);
+}
+
+function handleSearch() {
+  // get user input
+  const userInput = document.getElementById("search-input").value;
+  // filter pieces array
+  displayedPieces = pieces.filter((piece) => piece.title.toLowerCase().includes(userInput.toLowerCase()));
+  // display filtered pieces
+  showCards();
 }
 
 // This calls the addCards() function when the page is first loaded
