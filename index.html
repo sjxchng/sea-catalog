@@ -36,40 +36,34 @@
     <div class="controls-wrapper">
       <div class="controls">
         <!-- Search -->
-        <!-- handleSearch() called every time the user types in the search input -->
+        <!-- applySearchAndFilters() called every time the user types in the search input -->
         <div class="control-group">
           <label for="search-input">Search</label>
           <input
             type="text"
             id="search-input"
             placeholder="verse, song, or keyword..."
-            oninput="handleSearch()"
+            oninput="applySearchAndFilters()"
           />
         </div>
 
-        <!-- handleFilter() called every time the user changes a filter option -->
+        <!-- applySearchAndFilters() called every time the user changes a filter option -->
         <!-- Filter by type -->
         <div class="control-group">
           <label for="type-filter">Type</label>
-          <select id="type-filter" onchange="handleFilter()">
+          <select id="type-filter" onchange="applySearchAndFilters()">
             <option value="all">All Pieces</option>
             <option value="verse">Bible Verses</option>
             <option value="song">Song Lyrics</option>
+            <option value="personal">Personal Messages</option>
           </select>
         </div>
-        <!-- Filter by book -->
-        <div class="control-group">
-          <label for="book-filter">Book / Source</label>
-          <select id="book-filter" onchange="handleFilter()">
-            <option value="all">All</option>
-          </select>
-        </div>
-
+        
         <!-- Sort -->
         <!-- handleSort() called every time the user changes the sort option -->
         <div class="control-group">
           <label for="sort-select">Sort By</label>
-          <select id="sort-select" onchange="handleSort()">
+          <select id="sort-select" onchange="applySort()">
             <option value="default">Default</option>
             <option value="bible-order">Bible Order</option>
             <option value="alpha">A → Z (Reference)</option>

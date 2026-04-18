@@ -352,6 +352,9 @@ function showCards() {
   // clear the container before adding new cards
   cardContainer.innerHTML = "";
 
+  // update the results count
+  document.getElementById("results-count").textContent = displayedPieces.length + " pieces shown";
+
   const templateCard = document.querySelector(".card");
 
   for (let i = 0; i < displayedPieces.length; i++) {
@@ -401,19 +404,22 @@ function editCardContent(card, piece) {
   console.log("new card:", piece.title, "- html: ", card);
 }
 
-function handleSearch() {
+function applySearchAndFilters() {
   // get user input
   const userInput = document.getElementById("search-input").value;
+  const typeFilter = document.getElementById("type-filter").value;
   // filter pieces array
   // search not only by title, but also by English and Korean text
   displayedPieces = pieces.filter((piece) => 
-    piece.title.toLowerCase().includes(userInput.toLowerCase()) ||
-    piece.english.toLowerCase().includes(userInput.toLowerCase()) ||
-    piece.korean.toLowerCase().includes(userInput.toLowerCase())
+    (piece.type == typeFilter || typeFilter == "all") &&
+    ( piece.title.toLowerCase().includes(userInput.toLowerCase()) ||
+      piece.english.toLowerCase().includes(userInput.toLowerCase()) ||
+      piece.korean.toLowerCase().includes(userInput.toLowerCase())
+    )
   );
   // display filtered pieces
   showCards();
 }
 
-// This calls the addCards() function when the page is first loaded
+// This calls the showCards() function when the page is first loaded
 document.addEventListener("DOMContentLoaded", showCards);
