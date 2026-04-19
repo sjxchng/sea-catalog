@@ -690,6 +690,27 @@ html, body {
   font-size: 0.85rem;
 }
 
+/* Jump to top button */
+  .scroll-top-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--ink);
+    color: var(--cream);
+    border: none;
+    border-radius: 99px;
+    padding: 0.6rem 1.2rem;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    cursor: pointer;
+    z-index: 100;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .scroll-top-btn:hover {
+    background: var(--ink-light);
+    transform: translateY(-2px);
+  }
+  
 /* --- Responsive --- */
 @media (max-width: 600px) {
   .controls {
