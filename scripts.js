@@ -778,7 +778,7 @@ const pieces = [
     type: "personal",
     korean: "Beautiful",
     english: "Beautiful",
-    reference: "Name Tag Caligraphy",
+    reference: "Beautiful (Name Tag Caligraphy)",
     book: "Personal",
     bibleOrder: 69,
     chapter: 0,
@@ -793,7 +793,7 @@ const pieces = [
     type: "personal",
     korean: "the love, the hope",
     english: "the love, the hope",
-    reference: "Name Tag Calligraphy",
+    reference: "The Love, The Hope (Name Tag Calligraphy)",
     book: "Personal",
     bibleOrder: 69,
     chapter: 0,
@@ -822,6 +822,12 @@ const pieces = [
 
 // displayedPieces variable holds the pieces currently being displayed on the page  
 let displayedPieces = pieces;
+
+// favorites array holds the pieces that the user has marked as favorites
+let favorites = [];
+
+// false when English text is shown, true when Korean text is shown
+let showKorean = false;
 
 // This function adds cards the page to display the data in the array
 function showCards() {
@@ -858,6 +864,24 @@ function editCardContent(card, piece) {
   // make the card visible (since the template card is hidden)
   card.style.display = "block";
 
+  // add a favorite button to the card
+  const favBtn = document.createElement("button");
+  favBtn.className = "fav-btn";
+  // if piece in favorites array, show filled heart
+  if (favorites.includes(piece.id)) {
+    favBtn.textContent = "♥";
+  } 
+  // if piece not in favorites array, show empty heart
+  else {
+    favBtn.textContent = "♡";
+  }
+  // run toggleFavorite function when user clicks on the favorite button
+  favBtn.onclick = function() {
+    toggleFavorite(piece.id); 
+  };
+  // add the favorite button to the card
+  card.appendChild(favBtn);
+
   // fill in the image
   const cardImage = card.querySelector("img");
   cardImage.src = piece.image;
@@ -872,13 +896,24 @@ function editCardContent(card, piece) {
   const cardreference = card.querySelector(".card-title");
   cardreference.textContent = piece.reference;
 
-  // fill in English text
+  // fill in text based on language toggle
   const cardEnglish = card.querySelector(".card-english");
-  cardEnglish.textContent = piece.english;
+  if (showKorean && piece.korean) {
+    cardEnglish.textContent = piece.korean;
+  } 
+  else {
+    cardEnglish.textContent = piece.english;
+  }
 
   // fill in tool
   const toolItem = card.querySelector("#tool-item");
   toolItem.textContent = "🖊 " + piece.tool;
+
+  // fill in date
+  const dateItem = document.createElement("div");
+  dateItem.className = "card-meta-item";
+  dateItem.textContent = "📅 " + piece.date;
+  card.querySelector(".card-meta").appendChild(dateItem);
 
   // fill in piano (only if there is a piano piece)
   const pianoItem = card.querySelector("#piano-item");
@@ -967,6 +1002,95 @@ function applySort() {
   }
   
   // display sorted pieces
+  showCards();
+}
+
+// called when user clicks on the heart button on a card
+function toggleFavorite(pieceId) {
+  // if this piece is already in favorites
+  if (favorites.includes(pieceId)) {
+    // keep all pieces except the one with pieceId
+    favorites = favorites.filter((id) => id !== pieceId);
+  } 
+  // if this piece is not already in favorites
+  else {
+    // add it to the favorites array
+    favorites.push(pieceId);
+  }
+  // update the cards
+  showCards();
+  // update the favorites section
+  renderFavorites();
+}
+
+// updates the favorites section
+function renderFavorites() {
+  // locate the favorites container in HTML
+  const container = document.getElementById("favorites-container");
+  // locate the count badge in HTML
+  const countBadge = document.getElementById("fav-count");
+  
+  // update the count badge
+  countBadge.textContent = favorites.length;
+  
+  // if no favorites, show empty message
+  if (favorites.length === 0) {
+    container.innerHTML = '<p class="empty-fav-msg">Heart a piece to save it here ♡</p>';
+    return;
+  }
+  
+  // clear the container to add the updated list of favorites
+  container.innerHTML = "";
+  
+  // for each favorited id, find the matching piece and create a chip
+  // loop thru each favorited id
+  for (let i = 0; i < favorites.length; i++) {
+    const id = favorites[i];
+
+    // find the piece object that matches this id
+    // find() returns the first piece that matches the condition (p.id === id)
+    const piece = pieces.find((p) => p.id === id);
+
+    // skip if piece not found
+    if (!piece) {
+      continue;
+    }
+
+    // create a chip element for this piece
+    // createElement() creates a new HTML element specified by the tag name (which in this case, is "div")
+    const chip = document.createElement("div");
+    // add the "fav-chip" class to this chip for styling
+    chip.className = "fav-chip";
+
+    // chip shows the piece reference and a remove button
+    // toggleFavorite() is called with the piece id when the user clicks on the "x" button (remove button)
+    chip.innerHTML = "♥ " + piece.reference + '<button onclick="toggleFavorite(' + piece.id + ')">✕</button>';
+
+    // add the chip to the favorites container
+    container.appendChild(chip);
+  }
+}
+
+// called when the "Clear All" button is called in the favorites section
+function clearFavorites() {
+  favorites = [];
+  showCards();
+  renderFavorites();
+}
+
+// called when user clicks on the language toggle button
+function toggleLanguage() {
+  // flip the value of showKorean (true -> false, false -> true)
+  showKorean = !showKorean;
+  // update the language toggle button label
+  const label = document.getElementById("lang-label");
+  // if showKorean is true, label should say "English" (b/c clicking it will switch to English)
+  if (showKorean) {
+    label.textContent = "English";
+  } 
+  else {
+    label.textContent = "한국어";
+  }
   showCards();
 }
 
