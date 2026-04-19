@@ -829,6 +829,9 @@ let favorites = [];
 // false when English text is shown, true when Korean text is shown
 let showKorean = false;
 
+// array to hold submitted requests
+let requests = [];
+
 // This function adds cards the page to display the data in the array
 function showCards() {
 
@@ -849,7 +852,7 @@ function showCards() {
     let piece = displayedPieces[i];
 
     // create a new card by copying the template card
-    // cloneNode(true) creates a deep copy of the template card (copies the element and all of its children)
+    // cloneNode(true) creates a deep copy (copies the element and all of its children) of the template card
     const nextCard = templateCard.cloneNode(true); 
 
     // edit the content of the new card to match the piece data
@@ -933,12 +936,16 @@ function applySearchAndFilters() {
   const typeFilter = document.getElementById("type-filter").value;
 
   // filter pieces array
-  // search not only by reference, but also by English and Korean text
+  // .filter() returns a new array with only the pieces that match the condition in the function
   displayedPieces = pieces.filter((piece) => 
+    // filter by type
     (piece.type == typeFilter || typeFilter == "all") &&
     (
+      // matches reference 
       piece.reference.toLowerCase().includes(searchInput.toLowerCase()) ||
+      // matches english input
       piece.english.toLowerCase().includes(searchInput.toLowerCase()) ||
+      // check if korean text exists, then match korean input
       (piece.korean && piece.korean.toLowerCase().includes(searchInput.toLowerCase()))
     )
   );
@@ -1092,6 +1099,104 @@ function toggleLanguage() {
     label.textContent = "한국어";
   }
   showCards();
+}
+
+// called when user clicks the "Submit Request" button
+function submitRequest() {
+  // get user input
+  const name = document.getElementById("request-name").value;
+  const text = document.getElementById("request-text").value;
+  const ref = document.getElementById("request-ref").value;
+
+  // validate input (make sure text is not empty)
+  if (text === "") {
+    alert("Please enter the verse or lyric you'd like written.");
+    return;
+  }
+
+  // create a new request object and add it to the requests array
+  const newRequest = {
+    // e.g., the very first request will have id 1 <- 0 + 1
+    id: requests.length + 1,
+    // made name optional
+    name: name || "Anonymous",
+    text: text,
+    ref: ref
+  };
+  requests.push(newRequest);
+
+  // clear the input fields after submission
+  document.getElementById("request-name").value = "";
+  document.getElementById("request-text").value = "";
+  document.getElementById("request-ref").value = "";
+
+  // update the displayed list of requests
+  renderRequests();
+}
+
+// renders all requests to the page
+function renderRequests() {
+  // locate the requests list container in HTML
+  const list = document.getElementById("requests-list");
+
+  // clear the list before re-rendering 
+  list.innerHTML = "";
+
+  // loop through the requests array in reverse order (newest first)
+  for (let i = requests.length - 1; i >= 0; i--) {
+    // get the current request
+    const req = requests[i];
+
+    // create a new div element for this request
+    const item = document.createElement("div");
+    // add the "request-item" class to this item for styling
+    item.className = "request-item";
+    
+    // p element for name of requester (note: never empty b/c it's set to "Anonymous" if user doesn't enter a name)
+    const name = document.createElement("p");
+    name.className = "request-item-name";
+    name.textContent = req.name;
+
+    // p element for request text
+    const text = document.createElement("p");
+    text.className = "request-item-text";
+    text.textContent = req.text;
+
+    // add the name and text elements to the request item
+    item.appendChild(name);
+    item.appendChild(text);
+
+    // p element for reference
+    if (req.ref) {
+      const ref = document.createElement("p");
+      ref.className = "request-item-ref";
+      ref.textContent = req.ref;
+      item.appendChild(ref);
+    }
+
+    // create a remove button for this request
+    const btn = document.createElement("button");
+    btn.className = "request-remove-btn";
+    btn.textContent = "✕";
+    // when user clicks this button, remove this request
+    btn.onclick = function() {
+      removeRequest(req.id);
+    };
+
+    // add the remove button to the request item
+    item.appendChild(btn);
+
+    // add the request item to the list
+    list.appendChild(item);
+  }
+}
+
+// called when user clicks the "x" button on a request item to remove it
+function removeRequest(requestId) {
+  // filter the requests array to keep all requests except the one with requestId
+  requests = requests.filter((req) => req.id !== requestId);
+  // update the displayed list of requests
+  renderRequests();
 }
 
 // when the page first loads, show the cards and apply the default sort (by date, newest to oldest)
