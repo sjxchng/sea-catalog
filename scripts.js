@@ -40,6 +40,7 @@
 // piano: piano piece played alongside (null if none)
 // image: file path to the photo
 
+// this is the main data structure - an array of objects!
 const pieces = [
   {
     id: 1,
