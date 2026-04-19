@@ -907,10 +907,71 @@ function applySearchAndFilters() {
       (piece.korean && piece.korean.toLowerCase().includes(searchInput.toLowerCase()))
     )
   );
-  
+
   // display filtered pieces
   showCards();
 }
 
-// This calls the showCards() function when the page is first loaded
-document.addEventListener("DOMContentLoaded", showCards);
+function applySort() {
+  const sortValue = document.getElementById("sort-select").value;
+
+  // for .sort()
+  // result > 0 -> b comes before a
+  // result < 0 -> a comes before b
+  // result = 0 -> a and b are unchanged relative to each other
+
+  // sort by date (newest first)
+  if (sortValue === "date-desc") {
+    // logic: b is more recent -> result is positive -> b comes before a
+    displayedPieces.sort((a, b) => new Date(b.date) - new Date(a.date));
+  } 
+
+  // sort by date (oldest first)
+  else if (sortValue === "date-asc") {
+    // logic: a is more recent -> result is negative -> a comes before b
+    displayedPieces.sort((a, b) => new Date(a.date) - new Date(b.date));
+  } 
+
+  // sort by Bible order
+  else if (sortValue === "bible-order") {
+    displayedPieces.sort((a, b) => {
+      // logic: b comes first (b < a) -> result is positive -> b comes before a
+
+      // sort by book
+      if (a.bibleOrder !== b.bibleOrder) {
+        return a.bibleOrder - b.bibleOrder;
+      }
+      // sort by chapter
+      if (a.chapter !== b.chapter) {
+        return a.chapter - b.chapter;
+      }
+      // sort by verse
+      return a.verse - b.verse;
+    });
+  } 
+
+  // sort alphabetically by reference (A to Z)
+  else if (sortValue === "alpha") {
+    // "a".localeCompare("b")
+    // returns -1 if a comes before b
+    // returns 1 if b comes before a
+    // returns 0 if they are the same
+
+    // logic: a comes first (a < b) -> result is negative -> a comes before b
+    displayedPieces.sort((a, b) => a.reference.localeCompare(b.reference));
+  } 
+
+  // sort alphabetically by reference (Z to A)
+  else if (sortValue === "alpha-desc") {
+    displayedPieces.sort((a, b) => b.reference.localeCompare(a.reference));
+  }
+  
+  // display sorted pieces
+  showCards();
+}
+
+// when the page first loads, show the cards and apply the default sort (by date, newest to oldest)
+document.addEventListener("DOMContentLoaded", function() {
+  showCards();
+  applySort();
+});
