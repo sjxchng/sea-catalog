@@ -325,6 +325,17 @@ html, body {
   color: var(--sage);
   border: 1px solid var(--sage-light);
 }
+.card-type.personal {
+  background: #f5f0e8;
+  color: var(--gold);
+  border: 1px solid var(--gold-light);
+}
+
+.card-type.people {
+  background: #eef0f5;
+  color: #6b7a9e;
+  border: 1px solid #b0bcd4;
+}
 
 /* Card main text */
 .card-korean {

@@ -776,9 +776,9 @@ const pieces = [
   {
     id: 54,
     type: "personal",
-    korean: null,
-    english: "Name tag calligraphy",
-    reference: "Name Tag",
+    korean: "Beautiful",
+    english: "Beautiful",
+    reference: "Name Tag Caligraphy",
     book: "Personal",
     bibleOrder: -1,
     chapter: 0,
@@ -791,9 +791,9 @@ const pieces = [
   {
     id: 55,
     type: "personal",
-    korean: null,
-    english: "Name tag calligraphy",
-    reference: "Name Tag",
+    korean: "the love, the hope",
+    english: "the love, the hope",
+    reference: "Name Tag Calligraphy",
     book: "Personal",
     bibleOrder: -1,
     chapter: 0,
@@ -820,26 +820,37 @@ const pieces = [
   },
 ];
 
+// displayedPieces variable holds the pieces currently being displayed on the page  
 let displayedPieces = pieces;
 
 // This function adds cards the page to display the data in the array
 function showCards() {
-  // locate the container in the HTML where the cards should be added
+
+  // locate the container in the HTML (section where the cards will be added)
   const cardContainer = document.getElementById("card-container");
+
   // clear the container before adding new cards
   cardContainer.innerHTML = "";
 
   // update the results count
   document.getElementById("results-count").textContent = displayedPieces.length + " pieces shown";
 
+  // locate the template card in the HTML (card that is hidden and will be copied to make new cards)
   const templateCard = document.querySelector(".card");
 
+  // loop through the pieces to be displayed
   for (let i = 0; i < displayedPieces.length; i++) {
     let piece = displayedPieces[i];
 
-    const nextCard = templateCard.cloneNode(true); // Copy the template card
-    editCardContent(nextCard, piece); // Edit reference and image
-    cardContainer.appendChild(nextCard); // Add new card to the container
+    // create a new card by copying the template card
+    // cloneNode(true) creates a deep copy of the template card (copies the element and all of its children)
+    const nextCard = templateCard.cloneNode(true); 
+
+    // edit the content of the new card to match the piece data
+    editCardContent(nextCard, piece);
+
+    // add the new card to the container in the HTML
+    cardContainer.appendChild(nextCard);
   }
 }
 
@@ -883,17 +894,20 @@ function editCardContent(card, piece) {
 
 function applySearchAndFilters() {
   // get user input
-  const userInput = document.getElementById("search-input").value;
+  const searchInput = document.getElementById("search-input").value;
   const typeFilter = document.getElementById("type-filter").value;
+
   // filter pieces array
   // search not only by reference, but also by English and Korean text
   displayedPieces = pieces.filter((piece) => 
     (piece.type == typeFilter || typeFilter == "all") &&
-    ( piece.reference.toLowerCase().includes(userInput.toLowerCase()) ||
-      piece.english.toLowerCase().includes(userInput.toLowerCase()) ||
-      piece.korean.toLowerCase().includes(userInput.toLowerCase())
+    (
+      piece.reference.toLowerCase().includes(searchInput.toLowerCase()) ||
+      piece.english.toLowerCase().includes(searchInput.toLowerCase()) ||
+      (piece.korean && piece.korean.toLowerCase().includes(searchInput.toLowerCase()))
     )
   );
+  
   // display filtered pieces
   showCards();
 }
