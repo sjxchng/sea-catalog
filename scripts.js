@@ -415,7 +415,7 @@ const pieces = [
   },
   {
     id: 30,
-    type: "personal",
+    type: "people",
     korean: "박해를 받지 않는 자는 위대함이 없고 오해를 받지 않는 진리가 없습니다",
     english: "There is no greatness without persecution, and no truth that is not misunderstood",
     reference: "새로운 길을 가는 사람 / (A Person Who Walks a New Path) / 조정민 목사님 (Pastor Cho Jung-min)",
@@ -670,7 +670,7 @@ const pieces = [
   },
   {
     id: 47,
-    type: "personal",
+    type: "verse",
     korean: "광야 아름다운 밭이 되고 숲이 되리라",
     english: "[...] the wilderness becomes a fruitful field, and the fruitful field is deemed a forest",
     reference: "Isaiah 32:15",
@@ -696,7 +696,7 @@ const pieces = [
     date: "2025-11-13",
     tool: "Walnut ink and dip pen (Nikko G nib)",
     piano: null,
-    image: "images/56.jpeg"
+    image: "images/48.jpeg"
   },
   {
     id: 49,
@@ -711,7 +711,7 @@ const pieces = [
     date: "2025-11-18",
     tool: "Kuretake Fude Brush Pen No.22",
     piano: null,
-    image: "images/48.jpeg"
+    image: "images/49.jpeg"
   },
   {
     id: 50,
@@ -726,7 +726,7 @@ const pieces = [
     date: "2025-12-04",
     tool: "Zebra Pen Sarasa Clip Decoshine Retractable Gel Pen 0.5mm",
     piano: null,
-    image: "images/49.jpeg"
+    image: "images/50.jpeg"
   },
   {
     id: 51,
@@ -741,7 +741,7 @@ const pieces = [
     date: "2025-12-04",
     tool: "Kuretake Fude Brush Pen No.22",
     piano: null,
-    image: "images/50.jpeg"
+    image: "images/51.jpeg"
   },
   {
     id: 52,
@@ -756,7 +756,7 @@ const pieces = [
     date: "2026-01-29",
     tool: "Kuretake Fude Brush Pen No.22",
     piano: null,
-    image: "images/51.jpeg"
+    image: "images/52.jpeg"
   },
   {
     id: 53,
@@ -771,7 +771,7 @@ const pieces = [
     date: "2026-02-04",
     tool: "Kuretake Fude Brush Pen No.22",
     piano: null,
-    image: "images/52.jpeg"
+    image: "images/53.jpeg"
   },
   {
     id: 54,
@@ -786,7 +786,7 @@ const pieces = [
     date: "2026-03-12",
     tool: "Walnut ink and dip pen (Nikko G nib)",
     piano: null,
-    image: "images/53.jpeg"
+    image: "images/54.jpeg"
   },
   {
     id: 55,
@@ -801,7 +801,7 @@ const pieces = [
     date: "2026-04-08",
     tool: "Walnut ink and dip pen (Nikko G nib)",
     piano: null,
-    image: "images/54.jpeg"
+    image: "images/55.jpeg"
   },
   {
     id: 56,
@@ -816,7 +816,7 @@ const pieces = [
     date: "2026-04-09",
     tool: "Kuretake Fude Brush Pen No.22",
     piano: null,
-    image: "images/55.jpeg"
+    image: "images/56.jpeg"
   },
 ];
 
