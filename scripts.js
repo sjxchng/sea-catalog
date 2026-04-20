@@ -234,7 +234,7 @@ const pieces = [
     verse: 0,
     date: "2025-02-05",
     tool: "Kuretake Fude Brush Pen No.22",
-    piano: null,
+    piano: "Dear My Flower 너는 꽃이야 (Hisplan)",
     image: "images/13.jpeg"
   },
   {
@@ -249,7 +249,7 @@ const pieces = [
     verse: 0,
     date: "2025-02-05",
     tool: "Kuretake Fude Brush Pen No.22",
-    piano: null,
+    piano: "Dear My Flower 너는 꽃이야 (Hisplan)",
     image: "images/14.jpeg"
   },
   {
@@ -315,7 +315,7 @@ const pieces = [
   {
     id: 19,
     type: "song",
-    korean: "모든 시선을 주님께 드리고 / 살아 계신 하나님을 느낄 때 / 내 삶은 주의 역사가 되고 / 하나님이 일하기 시작하네",
+    korean: "모든 시선을 주님께 드리고 살아 계신 하나님을 느낄 때 내 삶은 주의 역사가 되고 하나님이 일하기 시작하네",
     english: "I fix all my gaze upon the Lord, and as I feel the living God, my life becomes the history of the Lord, and God begins to work.",
     reference: "Focus",
     book: "CCM",
@@ -324,13 +324,13 @@ const pieces = [
     verse: 0,
     date: "2025-02-12",
     tool: "Kuretake Fude Brush Pen No.22",
-    piano: null,
+    piano: "시선 (performed by pianojinlee)",
     image: "images/19.jpeg"
   },
   {
     id: 20,
     type: "song",
-    korean: "반가운 빗소리 들려 / 산천이 춤을 추네 / 봄비로 내리는 성령 / 내게도 주옵소서 / 가물어 메마른 땅에 / 단비를 내리시듯 / 성령의 단비를 부어 / 새생명 주옵소서",
+    korean: "반가운 빗소리 들려 산천이 춤을 추네 봄비로 내리는 성령 내게도 주옵소서 가물어 메마른 땅에 단비를 내리시듯 성령의 단비를 부어 새생명 주옵소서",
     english: "O Lord, grant me also the Holy Spirit falling like spring rain. As gentle rain falls upon the parched and thirsty land, pour down the rain of the Spirit and give me new life.",
     reference: "There Shall Be Showers of Blessing",
     book: "CCM",
@@ -339,7 +339,7 @@ const pieces = [
     verse: 0,
     date: "2025-02-13",
     tool: "Kuretake Fude Brush Pen No.22",
-    piano: null,
+    piano: "빈들에 마른 풀 같이 (performed by pianojinlee)",
     image: "images/20.jpeg"
   },
   {
@@ -369,7 +369,7 @@ const pieces = [
     verse: 30,
     date: "2025-02-17",
     tool: "Kuretake Fude Brush Pen No.22",
-    piano: null,
+    piano: "예배합니다 (performed by pianojinlee)",
     image: "images/22.jpeg"
   },
   {
@@ -384,7 +384,7 @@ const pieces = [
     verse: 2,
     date: "2025-02-17",
     tool: "Kuretake Fude Brush Pen No.22",
-    piano: null,
+    piano: "시편 1편 (Namooen)",
     image: "images/23.jpeg"
   },
   {
@@ -444,7 +444,7 @@ const pieces = [
     verse: 7,
     date: "2025-02-26",
     tool: "Kuretake Fude Brush Pen No.22",
-    piano: null,
+    piano: "정결한 마음 주시옵소서 (performed by pianojinlee)",
     image: "images/27.jpeg"
   },
   {
@@ -459,7 +459,7 @@ const pieces = [
     verse: 15,
     date: "2025-03-04",
     tool: "Kuretake Fude Brush Pen No.22",
-    piano: null,
+    piano: "나는 믿음으로 (Jesusville) (performed by pianojinlee)",
     image: "images/28.jpeg"
   },
   {
@@ -489,7 +489,7 @@ const pieces = [
     verse: 0,
     date: "2025-03-10",
     tool: "Kuretake Fude Brush Pen No.22",
-    piano: null,
+    piano: "복음들고 산을 (performed by pianojinlee)",
     image: "images/30.jpeg"
   },
   {
@@ -504,7 +504,7 @@ const pieces = [
     verse: 1,
     date: "2025-03-11",
     tool: "Kuretake Fude Brush Pen No.22",
-    piano: null,
+    piano: "시편 23편 (홍이삭) (performed by pianojinlee)",
     image: "images/31.jpeg"
   },
   {
@@ -534,7 +534,7 @@ const pieces = [
     verse: 23,
     date: "2025-03-12",
     tool: "Kuretake Fude Brush Pen No.22",
-    piano: null,
+    piano: "전능하신 나의 주 하나님은 (performed by pianojinlee)",
     image: "images/33.jpeg"
   },
   {
@@ -564,7 +564,7 @@ const pieces = [
     verse: 4,
     date: "2025-03-18",
     tool: "Kuretake Fude Brush Pen No.22",
-    piano: null,
+    piano: "소원 (전은주) (performed by pianojinlee)",
     image: "images/35.jpeg"
   },
   {
@@ -594,7 +594,7 @@ const pieces = [
     verse: 11,
     date: "2025-03-20",
     tool: "Kuretake Fude Brush Pen No.22",
-    piano: null,
+    piano: "내 슬픔 변해 (나의 슬픔을) (performed by pianojinlee)",
     image: "images/37.jpeg"
   },
   {
@@ -639,7 +639,7 @@ const pieces = [
     verse: 22,
     date: "2025-05-01",
     tool: "Kuretake Fude Brush Pen No.22",
-    piano: null,
+    piano: "전능하신 주 하나님은 (performed by pianojinlee)",
     image: "images/40.jpeg"
   },
   {
@@ -654,7 +654,7 @@ const pieces = [
     verse: 3,
     date: "2025-06-17",
     tool: "Kuretake Fude Brush Pen No.22",
-    piano: null,
+    piano: "충만-손경민 (performed by pianojinlee)",
     image: "images/41.jpeg"
   },
   {
@@ -744,7 +744,7 @@ const pieces = [
     verse: 15,
     date: "2025-10-30",
     tool: "Kuretake Fude Brush Pen No.22",
-    piano: null,
+    piano: "달고 오묘한 그 말씀 [HYMN 200] (Namooen)",
     image: "images/47.jpeg"
   },
   {
@@ -849,7 +849,7 @@ const pieces = [
     verse: 0,
     date: "2026-03-12",
     tool: "Walnut ink and dip pen (Nikko G nib)",
-    piano: null,
+    piano: "Yellow Flowers (From Paris)",
     image: "images/54.jpeg"
   },
   {
