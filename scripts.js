@@ -285,7 +285,7 @@ const pieces = [
   {
     id: 17,
     type: "song",
-    korean: "주안에 우린 하나 / 모습은 달라도 예수님 한 분만 바라네 / 사랑과 선행으로 서로를 격려해 / 따스함으로 보듬어 가리 / 주님 우리 안에 함께 하시니 / 형제 자매의 기쁨과 슬픔 느끼네 / 내 안에 있는 주님 모습 보네 / 주님 기뻐하시네 / 주님 우릴 통해 계획하신 일 / 부족한 입술로 찬양하게 하신 일 / 주님 우릴 통해 계획하신 일 / 너를 통해 하실 일 기대해",
+    korean: "주안에 우린 하나 모습은 달라도 예수님 한 분만 바라네. 사랑과 선행으로 서로를 격려해 따스함으로 보듬어 가리. 주님 우리 안에 함께 하시니 형제 자매의 기쁨과 슬픔 느끼네. 내 안에 있는 주님 모습 보네 주님 기뻐하시네. 주님 우릴 통해 계획하신 일 부족한 입술로 찬양하게 하신 일 주님 우릴 통해 계획하신 일 너를 통해 하실 일 기대해.",
     english: "We are one in the Lord, for He has called us with one vision. Though we are all different, it is the Lord who makes us one. I have an expectation for the work the Lord will do through you.",
     reference: "The Expectation",
     book: "CCM",
@@ -300,7 +300,7 @@ const pieces = [
   {
     id: 18,
     type: "song",
-    korean: "보소서 주님 나의 마음을 / 선한 것 하나 없습니다 / 그러나 내 모든 것 주께 드립니다 / 사랑으로 안으시고 날 새롭게 하소서 / 주님 마음 내게 주소서 내 아버지 / 주님 마음 내게 주소서 / 나를 향하신 주님의 뜻이 이루어지도록 / 주님 마음 내게 주소서",
+    korean: "보소서 주님 나의 마음을. 선한 것 하나 없습니다. 그러나 내 모든 것 주께 드립니다. 사랑으로 안으시고 날 새롭게 하소서. 주님 마음 내게 주소서 내 아버지. 주님 마음 내게 주소서. 나를 향하신 주님의 뜻이 이루어지도록. 주님 마음 내게 주소서.",
     english: "Behold, O Lord, my heart. There is nothing good in me. But I offer my all to You. Lord, give me Your heart that longs for me. Use me as Your instrument to spread Your love.",
     reference: "Give Me Your Heart",
     book: "CCM",
@@ -510,7 +510,7 @@ const pieces = [
   {
     id: 32,
     type: "verse",
-    korean: "여호와는 나의 목자시니 내게 부족함이 없으리로다 그가 나를 푸른 풀밭에 누이시며 쉴 만한 물 가로 인도하시는도다 내 영혼을 소생시키시고 자기 이름을 위하여 의의 길로 인도하시는도다 내가 사망의 음침한 골짜기로 다닐지라도 해를 두려워하지 않을 것은 주께서 나와 함께 하심이라 주의 지팡이와 막대기가 나를 안위하시나이다 주께서 내 원수의 목전에서 내게 상을 차려 주시고 기름을 내 머리에 부으셨으니 내 잔이 넘치나이다 내 평생에 선하심과 인자하심이 반드시 나를 따르리니 내가 여호와의 집에 영원히 살리로다",
+    korean: "여호와는 나의 목자시니 내게 부족함이 없으리로다. 그가 나를 푸른 풀밭에 누이시며 쉴 만한 물 가로 인도하시는도다. 내 영혼을 소생시키시고 자기 이름을 위하여 의의 길로 인도하시는도다. 내가 사망의 음침한 골짜기로 다닐지라도 해를 두려워하지 않을 것은 주께서 나와 함께 하심이라 주의 지팡이와 막대기가 나를 안위하시나이다. 주께서 내 원수의 목전에서 내게 상을 차려 주시고 기름을 내 머리에 부으셨으니 내 잔이 넘치나이다. 내 평생에 선하심과 인자하심이 반드시 나를 따르리니 내가 여호와의 집에 영원히 살리로다.",
     english: "The Lord is my shepherd; I shall not want. He makes me lie down in green pastures. He leads me beside still waters. He restores my soul. He leads me in paths of righteousness for his name's sake. Even though I walk through the valley of the shadow of death, I will fear no evil, for you are with me; your rod and your staff, they comfort me. You prepare a table before me in the presence of my enemies; you anoint my head with oil; my cup overflows. Surely goodness and mercy shall follow me all the days of my life, and I shall dwell in the house of the Lord forever.",
     reference: "Psalm 23",
     book: "Psalms",
@@ -840,9 +840,9 @@ const pieces = [
   {
     id: 54,
     type: "personal",
-    korean: "Beautiful",
+    korean: "아름다운",
     english: "Beautiful",
-    reference: "Beautiful (Name Tag Caligraphy)",
+    reference: "Beautiful (Name Tag Calligraphy)",
     book: "Personal",
     bibleOrder: 69,
     chapter: 0,
@@ -855,7 +855,7 @@ const pieces = [
   {
     id: 55,
     type: "personal",
-    korean: "the love, the hope",
+    korean: "사랑, 소망",
     english: "the love, the hope",
     reference: "The Love, The Hope (Name Tag Calligraphy)",
     book: "Personal",
