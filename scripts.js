@@ -342,24 +342,87 @@ const pieces = [
     piano: null,
     image: "images/20.jpeg"
   },
-
-
-
-
-
-
-
-
-
-
-
-
+  {
+    id: 21,
+    type: "verse",
+    korean: "그가 경건하여 온 집안과 더불어 하나님을 경외하며 백성을 많이 구제하고 하나님께 항상 기도하더니",
+    english: "A devout man who feared God with all his household, gave alms generously to the people, and prayed continually to God.",
+    reference: "Acts 10:2",
+    book: "Acts",
+    bibleOrder: 44,
+    chapter: 10,
+    verse: 2,
+    date: "2025-02-17",
+    tool: "Kuretake Fude Brush Pen No.22",
+    piano: null,
+    image: "images/21.jpeg"
+  },
+  {
+    id: 22,
+    type: "verse",
+    korean: "고운 것도 거짓되고 아름다운 것도 헛되나 여호와를 경외하는 여자는 칭찬을 받을 것이라",
+    english: "Charm is deceitful, and beauty is vain, but a woman who fears the LORD is to be praised.",
+    reference: "Proverbs 31:30",
+    book: "Proverbs",
+    bibleOrder: 20,
+    chapter: 31,
+    verse: 30,
+    date: "2025-02-17",
+    tool: "Kuretake Fude Brush Pen No.22",
+    piano: null,
+    image: "images/22.jpeg"
+  },
+  {
+    id: 23,
+    type: "verse",
+    korean: "오직 여호와의 율법을 즐거워하여 그의 율법을 주야로 묵상하는 자로다",
+    english: "but his delight is in the law of the LORD, and on his law he meditates day and night.",
+    reference: "Psalm 1:2",
+    book: "Psalms",
+    bibleOrder: 19,
+    chapter: 1,
+    verse: 2,
+    date: "2025-02-17",
+    tool: "Kuretake Fude Brush Pen No.22",
+    piano: null,
+    image: "images/23.jpeg"
+  },
+  {
+    id: 24,
+    type: "verse",
+    korean: "여호와 우리 주여 주의 이름이 온 땅에 어찌 그리 아름다운지요",
+    english: "O LORD, our Lord, how majestic is your name in all the earth!",
+    reference: "Psalm 8:1",
+    book: "Psalms",
+    bibleOrder: 19,
+    chapter: 8,
+    verse: 1,
+    date: "2025-02-24",
+    tool: "Kuretake Fude Brush Pen No.22",
+    piano: null,
+    image: "images/24.jpeg"
+  },
+  {
+    id: 25,
+    type: "verse",
+    korean: "사람이 무엇이기에 주께서 그를 생각하시며 인자가 무엇이기에 주께서 그를 돌보시나이까",
+    english: "what is man that you are mindful of him, and the son of man that you care for him?",
+    reference: "Psalm 8:4",
+    book: "Psalms",
+    bibleOrder: 19,
+    chapter: 8,
+    verse: 4,
+    date: "2025-02-24",
+    tool: "Kuretake Fude Brush Pen No.22",
+    piano: null,
+    image: "images/25.jpeg"
+  },
   {
     id: 26,
     type: "song",
-    korean: null,
+    korean: "아버지 나의 하나님 말씀하시는 하나님 나의 길 기도하오니 나에게 말씀하소서 사랑하는 아이야 두려워하지 말아라 내길의 모든 범사가 기한과 때가 있단다 네가 어디로 가든지 나 너와 함께 하리라",
     english: "The welcome sound of rain is heard, and all nature dances. O Lord, grant me also the Holy Spirit falling like spring rain. As gentle rain falls upon the parched and thirsty land, pour down the rain of the Spirit and give me new life.",
-    reference: "My Prayer (나의 기도)",
+    reference: "My Prayer (나의 기도 by 시와그림)",
     book: "CCM",
     bibleOrder: 67,
     chapter: 0,
@@ -372,7 +435,7 @@ const pieces = [
   {
     id: 27,
     type: "verse",
-    korean: null,
+    korean: "여호와는 의로우사 의로운일을 좋아하시나니 정직한자는 그의 얼굴을 뵈오리이다",
     english: "For the Lord is righteous; he loves righteous deeds; the upright shall behold his face.",
     reference: "Psalm 11:7",
     book: "Psalms",
@@ -387,7 +450,7 @@ const pieces = [
   {
     id: 28,
     type: "verse",
-    korean: null,
+    korean: "나는 의로운중에 주의 얼굴을 뵈오리니 깰 때에 주의 형상으로 만족하리이다",
     english: "As for me, I shall behold your face in righteousness; when I awake, I shall be satisfied with your likeness.",
     reference: "Psalm 17:15",
     book: "Psalms",
@@ -402,7 +465,7 @@ const pieces = [
   {
     id: 29,
     type: "verse",
-    korean: null,
+    korean: "누구든지 이 음란하고 죄많은 세대에서 나와 내 말을 부끄러워하면 인자도 아버지의 영광으로 거룩한 천사들과 함께 올 때에 그 사람을 부끄러워 하리라",
     english: "For whoever is ashamed of me and of my words in this adulterous and sinful generation, of him will the Son of Man also be ashamed when he comes in the glory of his Father with the holy angels.",
     reference: "Mark 8:38",
     book: "Mark",
@@ -432,7 +495,7 @@ const pieces = [
   {
     id: 31,
     type: "verse",
-    korean: null,
+    korean: "여호와는 나의 목자시니 내게 부족함이 없으리로다",
     english: "The Lord is my shepherd; I shall not want.",
     reference: "Psalm 23:1",
     book: "Psalms",
@@ -447,7 +510,7 @@ const pieces = [
   {
     id: 32,
     type: "verse",
-    korean: null,
+    korean: "여호와는 나의 목자시니 내게 부족함이 없으리로다 그가 나를 푸른 풀밭에 누이시며 쉴 만한 물 가로 인도하시는도다 내 영혼을 소생시키시고 자기 이름을 위하여 의의 길로 인도하시는도다 내가 사망의 음침한 골짜기로 다닐지라도 해를 두려워하지 않을 것은 주께서 나와 함께 하심이라 주의 지팡이와 막대기가 나를 안위하시나이다 주께서 내 원수의 목전에서 내게 상을 차려 주시고 기름을 내 머리에 부으셨으니 내 잔이 넘치나이다 내 평생에 선하심과 인자하심이 반드시 나를 따르리니 내가 여호와의 집에 영원히 살리로다",
     english: "The Lord is my shepherd; I shall not want. He makes me lie down in green pastures. He leads me beside still waters. He restores my soul. He leads me in paths of righteousness for his name's sake. Even though I walk through the valley of the shadow of death, I will fear no evil, for you are with me; your rod and your staff, they comfort me. You prepare a table before me in the presence of my enemies; you anoint my head with oil; my cup overflows. Surely goodness and mercy shall follow me all the days of my life, and I shall dwell in the house of the Lord forever.",
     reference: "Psalm 23",
     book: "Psalms",
@@ -462,7 +525,7 @@ const pieces = [
   {
     id: 33,
     type: "verse",
-    korean: null,
+    korean: "예수께서 이르시되 할 수 있거든이 무슨 말이냐 믿는 자에게는 능히 하지 못할 일이 없느니라",
     english: "And Jesus said to him, 'If you can'! All things are possible for one who believes.",
     reference: "Mark 9:23",
     book: "Mark",
@@ -702,7 +765,7 @@ const pieces = [
   {
     id: 49,
     type: "verse",
-    korean: null,
+    korean: "이는 보라 가운데 계신 어린 양이 그들의 목자가 되어 생명수샘으로 인도하시고 하나님께서 그들의 눈에서 모든 눈물을 씻어 주실 것임이라",
     english: "For the Lamb in the midst of the throne will be their shepherd, and he will guide them to springs of living water, and God will wipe away every tear from their eyes.",
     reference: "Revelation 7:17",
     book: "Revelation",
@@ -717,9 +780,9 @@ const pieces = [
   {
     id: 50,
     type: "song",
-    korean: null,
+    korean: "주가 예비하신 나의 본향집에 나를 부르실 그날까지 험한 십자가를 항상 달게 지고 내가 죽도록 충성하리 최후 승리를 받기까지 주의 십자가 사랑하리 빛난 면류관 받기까지 험한 십자가 붇들겠네",
     english: "To the old rugged cross I will ever be true; its shame and reproach gladly bear. Then He'll call me some day to my home far away, where His glory forever I'll share. So I'll cherish the old rugged cross, till my trophies at last I shall lay down; I will cling to the old rugged cross, and exchange it some day for a crown.",
-    reference: "The Old Rugged Cross",
+    reference: "The Old Rugged Cross (갈보리산 위에)",
     book: "CCM",
     bibleOrder: 67,
     chapter: 0,
@@ -732,7 +795,7 @@ const pieces = [
   {
     id: 51,
     type: "verse",
-    korean: null,
+    korean: "성도들의 인내가 여기 있나니 그들은 하나님의 계명과 예수에 대한 믿음을 지키는 자니라",
     english: "Here is a call for the endurance of the saints, those who keep the commandments of God and their faith in Jesus.",
     reference: "Revelation 14:12",
     book: "Revelation",
@@ -747,7 +810,7 @@ const pieces = [
   {
     id: 52,
     type: "verse",
-    korean: null,
+    korean: "그러나 너는 모든 일에 신중하여 고난을 받으며 전도자의 일을 하며 네 직무를 다하라",
     english: "As for you, always be sober-minded, endure suffering, do the work of an evangelist, fulfill your ministry.",
     reference: "2 Timothy 4:5",
     book: "2 Timothy",
@@ -762,7 +825,7 @@ const pieces = [
   {
     id: 53,
     type: "verse",
-    korean: null,
+    korean: "이제 청하건데 종의 집에 복을 주사 주앞에 영원히 있게 하옵소서 주 여호와께서 말씀하셨사오니 주의 종의 집이 영원히 복을 받게 하옵소서 하니라",
     english: "Now therefore may it please you to bless the house of your servant, so that it may continue forever before you. For you, O Lord God, have spoken, and with your blessing shall the house of your servant be blessed forever.",
     reference: "2 Samuel 7:29",
     book: "2 Samuel",
@@ -807,7 +870,7 @@ const pieces = [
   {
     id: 56,
     type: "verse",
-    korean: null,
+    korean: "예수께서 이르시되 나는 부활이요 생명이니 나를 믿는 자는 죽어도 살겠고 무릇 살아서 나를 믿는 자는 영원히 죽지 아니하리니 이것을 네가 믿느냐",
     english: "Jesus said to her, 'I am the resurrection and the life. Whoever believes in me, though he die, yet shall he live, and everyone who lives and believes in me shall never die. Do you believe this?'",
     reference: "John 11:25-26",
     book: "John",
