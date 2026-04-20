@@ -540,7 +540,7 @@ const pieces = [
   {
     id: 34,
     type: "song",
-    korean: "난 예수로 예수로 예수로 충만하네 / 영원한 왕 내 안에 살아계시네",
+    korean: "난 예수로 예수로 예수로 충만하네 영원한 왕 내 안에 살아계시네",
     english: "I am filled with Jesus, with Jesus, with Jesus / The eternal King lives within me.",
     reference: "Fullness (충만)",
     book: "CCM",
@@ -549,7 +549,7 @@ const pieces = [
     verse: 0,
     date: "2025-03-13",
     tool: "Kuretake Fude Brush Pen No.22",
-    piano: null,
+    piano: "충만-손경민 (performed by pianojinlee)",
     image: "images/34.jpeg"
   },
   {
